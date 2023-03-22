@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator BMInya Iman</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" 
+    integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+<div class="split left">    
+    <div id="Kalkulator BMI">
+    <h1>Kalkulator BMI</h1>
+
+    <div class="header1">
+    <p style="text-align: justify">Body Mass Index atau disingkat BMI adalah salah satu cara mengetahui 
+    berat badan ideal yang diukur berdasarkan berat dan tinggi badan Anda. 
+    Dengan menghitungnya menggunakan rumus BMI, Anda bisa melihat apakah status 
+    berat badan Anda termasuk kategori normal, kurang, berlebih, atau bahkan obesitas
+    </p>
+    </div>
+
+    <div class= "card">
+        <form id="form" name="" class="form" >
+            <div class= "from-group-jk">
+                <strong>Jenis Kelamin</strong>
+                <div class= "icon-input">
+                    <input type="radio" name="Jenis-Kelamin" 
+                    id ="L" required="true">
+                    <label for="Jenis-Kelamin">Laki-Laki</label>
+                    <input type="radio" name="Jenis-Kelamin"
+                    id ="P" required="true">
+                    <label for="Jenis-Kelamin">Perempuan</label>
+                </div>
+            </div>
+            <div class= "from-group1">
+                <label for="Berat-Badan">Berat Badan (kg)</label>
+                <div class= "icon-input-text">
+                <i class="fa-solid fa-pencil"></i>                   
+                <input type="number" id="Berat-Badan" size="80" required="true">
+                </div>
+            </div>
+
+            <div class= "from-group2">
+                <label for="Usia">Usia (Tahun)</label>
+                <div class= "icon-input-text">              
+                <i class="fa-solid fa-pencil"></i>                
+                <input type="number" id="Usia" size="80" required="true">
+                </div>
+            </div>
+            <div class= "from-group3">
+                <label for="Tinggi-Badan">Tinggi Badan (cm)</label>
+                <div class= "icon-input-text">                   
+                <i class="fa-solid fa-pencil"></i>                   
+                <input type="number" id="Tinggi-Badan" size="80" required="true">
+                </div>
+            </div>
+
+            <div class= "button-group">
+                <button class="calculate" id="submit" onclick="calculate();">Hitung BMI</button>
+                <!--button id="hitung" type="submit" class= "button" style="color:white; background-color:rgba(0, 187, 255, 0.866)">Hitung BMI</button-->
+                <button class= "button" id="reset" >Reset</button>
+                </div>
+
+        </form>
+    </div>   
+    <hr/>
+
+    <div class="footer1">
+
+        <p class="Topik1">Keunggulan Fitur</p>
+    
+        <p>
+        1. Menghitung berat badan </br>
+        2. Menentukan kategori berat badan ideal atau tidak</br>     
+        3. Mempersiapkan penurunan berat badan 
+        </p>
+    
+        <p style="text-align: justify">Kalkulator ini hanya boleh digunakan untuk orang dewasa
+        (wanita hamil atau menyusui tidak boleh mengandalkan pembacaan BMI ini)
+        dan tidak ada tindakan yang harus diambil berdasarkan nilainya
+        selain berkonsultasi dengan pihak berwajib seperti dokter
+        </p>
+    
+        <p style="text-align: justify">Kalkulator akan memberi Anda gambaran tentang perbandingan
+        berat badan Anda dengan nilai umum. Indeks Massa Tubuh (atau BMI) dihitung sebagai berat badan Anda
+        (dalam kilogram) dibagi dengan kuadrat tinggi badan Anda (dalam meter) atau BMI =Kg/M<sup>2</sup>
+        </p>
+    </div>
+    
+<div class="split right">  
+
+        <h1>Hasil</h1>
+        <div class= "card2">
+            <form id="" name="" class="form" >
+
+                <div id="Hasil">
+                    <p class="comment1"style="font-size: 20px;"></p>                            
+                </br>
+                    <div id= "hasil-nilai" style="font-size: 30px;">
+                    00.00</div>
+                </br>
+                    <p class="comment2"style="font-size: 15px;"></p>                    
+                </div>
+                </br>
+
+                <div class= "button-group2">
+                    <button class= "button2" id="Download" type="submit">Download Hasil BMI</button>
+                </div>
+            
+            </form>
+        </div>   
+
+    <div class="footer2">
+    <p class="Topik2">Hasil BMI diantara 23 dan 25</p>
+    <p style="text-align: justify">Anda berada dalam kategori overweight atau berat badan berlebih. </br>
+    Cara terbaik untuk menurunkan berat badan adalah dengan mengatur kadar kalori makanan yang dikonsumsi dan rutin berolahraga.<br/>
+    Jika BMI Anda berada dalam kategori ini maka Anda dianjurkan untuk menurunkan berat badan hingga batas normal.
+    </p>
+    
+    <tr>
+    <div class= "button-group3">
+        <button class= "button2" id="konsultasi" type="submit">Konsultasi Ahli Gizi Via Aplikasi</button>
+        <button class= "button2" id="register">Registrasi Online Ahli Gizi</button>
+        </div>
+    </tr>
+
+    <p style="text-align: justify">BMI tidak sepenuhnya mewakili diagnosis menyeluruh dari kesehatan tubuh
+        dan resiko penyakit seseorang. Anda perlu konsultasi lebih lanjut mengenai resiko dan kekhawatiran
+        Anda terkait dengan berat badan Anda.
+        </p>
+    </div>
+
+    <div class= "card3" style="text-align: center;">
+        <form id="" name="" class="form" >
+            <p class="comment1"style="font-size: 18px;">
+                Beberapa penyakit yang berasal dari kegemukan
+            </p>
+            <p class="comment2"style="font-size: 16px;">
+            Diabetes</br>
+            Hipertensi</br>
+            Sakit Jantung</br>
+            Osteoarthritis</br>
+            </p>                               
+
+        <div class= "button-group4">
+        <button class= "button2" id="konsultasi" type="submit">Konsultasi Ahli Gizi Via Aplikasi</button>
+        <button class= "button2" id="register">Registrasi Online Ahli Gizi</button>
+        </div>        
+        </form>
+
+    </div>
+
+    <div class="center">
+        <p>Download Aplikasi</p>
+        <img src="https://www.freepnglogos.com/uploads/app-store-logo-png/google-play-and-apple-app-store-logos-22.png" alt="avatar app">    
+        <!--img src="https://w7.pngwing.com/pngs/52/715/png-transparent-google-play-logo-google-play-computer-icons-app-store-google-text-logo-sign.png" alt="avatar appstore"-->
+        <!--img src="https://e7.pngegg.com/pngimages/718/1015/png-clipart-app-store-apple-google-play-apple-text-logo.png" alt="avatar ios"-->
+    </div> 
+</div>
+
+ <!-- The Modal -->
+ <div id="myModal" class="modal">
+    <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p id="modalText"></p>
+  </div></div>
+
+<script src="/js/index.js"></script>
+</body>
+</html>
